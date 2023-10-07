@@ -1,6 +1,4 @@
-import PokemonCard from "./components/PokemonCard";
-
-function App() {
+function PokemonCard() {
   return (
     <figure>
       <img
@@ -12,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default PokemonCard;
