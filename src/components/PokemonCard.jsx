@@ -1,9 +1,8 @@
-function PokemonCard(props) {
-  const {pokemon} = props;
+function PokemonCard(pokemon) {
 
   console.log(pokemon);
 
-  if (pokemon && pokemon.imgSrc) {
+  if (pokemon.name && pokemon.imgSrc) {
     return (
       <figure>
         <img src={pokemon.imgSrc} alt={pokemon.name} />
