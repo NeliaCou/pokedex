@@ -1,6 +1,6 @@
-function PokemonCard(pokemon) {
-
-  console.log(pokemon);
+function PokemonCard(props) {
+  const {pokemon} = props;
+  console.log(pokemon.name);
 
   if (pokemon.name && pokemon.imgSrc) {
     return (
