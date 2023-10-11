@@ -47,8 +47,8 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={selectedPokemon} />
-      <button onClick={handleClickBis}>Précédent</button>
-      <button onClick={handleClick}>Suivant</button>
+      <button onClick={handleClickBis} disabled={pokemonIndex === 0}>Précédent</button>
+      <button onClick={handleClick} disabled={pokemonIndex === pokemonList.length - 1}>Suivant</button>
     </div>
   );
 }
