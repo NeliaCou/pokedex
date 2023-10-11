@@ -5,7 +5,7 @@ import uuidGenerator from "./components/IdGenerator";
 
 function App() {
 
-const [pokemonId, setPokemonId] = useState(null);
+const [pokemonId, setPokemonId] = useState(0);
 
   const pokemonList = [
     {
@@ -38,7 +38,7 @@ const [pokemonId, setPokemonId] = useState(null);
     },
   ];
 
-  const selectedPokemon = pokemonList.find((pokemon) => pokemon.id === pokemonId);
+  const selectedPokemon = pokemonList.find(pokemon => pokemon.id === pokemonId);
 
   return (
     <div>
