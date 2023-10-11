@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function NavBar({ pokemonList, selectedPokemonId, setPokemonId }) {
   const handleClick = (pokemonId) => {
     setPokemonId(pokemonId);
@@ -14,5 +16,11 @@ function NavBar({ pokemonList, selectedPokemonId, setPokemonId }) {
     </div>
   );
 }
+
+NavBar.propTypes = {
+  pokemonList: PropTypes.array.isRequired,
+  selectedPokemonId: PropTypes.string,
+  setPokemonId: PropTypes.func.isRequired,
+};
 
 export default NavBar;
