@@ -6,4 +6,4 @@ const uuidGenerator = () =>
     return v.toString(16);
 });
 
-export default UuidGenerator;
+export default uuidGenerator;

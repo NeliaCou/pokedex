@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
-import UuidGenerator from "./components/UuidGenerator";
+import uuidGenerator from "./components/UuidGenerator";
 
 function App() {
 

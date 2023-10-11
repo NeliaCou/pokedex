@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function NavBar({ pokemonList, selectedPokemonId, setPokemonId }) {
+function NavBar({ pokemonList, setPokemonId }) {
   const handleClick = (pokemonId) => {
     setPokemonId(pokemonId);
   };
