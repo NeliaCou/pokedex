@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+importgi { useState } from "react";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
 import { uuidGenerator } from "./components/UuidGenerator";
