@@ -1,9 +1,17 @@
-function NavBar({ pokemonIndex, pokemonCount, handleClick, handleClickBis }) {
+function NavBar({ pokemonList, selectedPokemonId, setPokemonId }) {
+  const handleClick = (pokemonId) => {
+    setPokemonId(pokemonId);
+  };
   return (
-    <nav>
-      <button onClick={handleClickBis} disabled={pokemonIndex === 0}>Précédent</button>
-      <button onClick={handleClick} disabled={pokemonIndex === pokemonCount - 1}>Suivant</button>
-    </nav>
+    <div>
+      <nav>
+        {pokemonList.map((pokemon) => (
+          <button key={pokemon.id} onClick={() => handleClick(pokemon.id)}>
+            {pokemon.name}
+          </button>
+        ))}
+      </nav>
+    </div>
   );
 }
 
