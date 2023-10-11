@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
-import uuidGenerator from "./components/UuidGenerator";
+import uuidGenerator from "./components/IdGenerator";
 
 function App() {
 
@@ -38,7 +38,7 @@ const [pokemonId, setPokemonId] = useState(null);
     },
   ];
 
-  const selectedPokemon = pokemonList.find(pokemon => pokemon.id === pokemonId);
+  const selectedPokemon = pokemonList.find((pokemon) => pokemon.id === pokemonId);
 
   return (
     <div>

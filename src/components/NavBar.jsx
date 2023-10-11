@@ -19,7 +19,6 @@ function NavBar({ pokemonList, setPokemonId }) {
 
 NavBar.propTypes = {
   pokemonList: PropTypes.array.isRequired,
-  selectedPokemonId: PropTypes.string,
   setPokemonId: PropTypes.func.isRequired,
 };
 
