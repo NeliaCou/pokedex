@@ -3,49 +3,54 @@ import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
 import uuidGenerator from "./components/IdGenerator";
 
+const pokemonList = [
+  {
+    id: uuidGenerator(),
+    name: "bulbasaur",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+  },
+  {
+    id: uuidGenerator(),
+    name: "charmander",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+  },
+  {
+    id: uuidGenerator(),
+    name: "squirtle",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+  },
+  {
+    id: uuidGenerator(),
+    name: "pikachu",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+  },
+  {
+    id: uuidGenerator(),
+    name: "mew",
+  },
+];
+
 function App() {
+  const [pokemonId, setPokemonId] = useState(pokemonList[0].id);
 
-const [pokemonId, setPokemonId] = useState(0);
+  const handleClick = (id) => {
+    setPokemonId(id);
+  };
 
-  const pokemonList = [
-    {
-      id: uuidGenerator(),
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      id: uuidGenerator(),
-      name: "charmander",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
-    },
-    {
-      id: uuidGenerator(),
-      name: "squirtle",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
-    },
-    {
-      id: uuidGenerator(),
-      name: "pikachu",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
-    },
-    {
-      id: uuidGenerator(),
-      name: "mew",
-    },
-  ];
+  let selectedPokemon = pokemonList.find((pokemon) => pokemon.id === pokemonId);
 
-  const selectedPokemon = pokemonList.find(pokemon => pokemon.id === pokemonId);
-
+  
   return (
     <div>
       <NavBar
         pokemonList={pokemonList}
         selectedPokemonId={pokemonId}
         setPokemonId={setPokemonId}
+        handleClick={handleClick}
       />
       <PokemonCard pokemon={selectedPokemon} />
     </div>
