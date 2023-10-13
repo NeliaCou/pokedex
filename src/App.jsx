@@ -2,6 +2,7 @@ import { useState } from "react";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
 import uuidGenerator from "./components/IdGenerator";
+import { useEffect } from "react";
 
 const pokemonList = [
   {
@@ -43,7 +44,13 @@ function App() {
 
   let selectedPokemon = pokemonList.find((pokemon) => pokemon.id === pokemonId);
 
-  
+  useEffect(
+    () =>  {
+      alert("hello pokemon trainer :)")
+    }, 
+    []
+    );
+
   return (
     <div>
       <NavBar

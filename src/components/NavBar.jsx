@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 
+
 function NavBar({ pokemonList, handleClick }) {
+
+
+
+  
   return (
     <>
       {pokemonList.map((pokemon) => (
