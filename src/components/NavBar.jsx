@@ -1,6 +1,13 @@
 import PropTypes from "prop-types";
 
-function NavBar({ pokemonList, handleClick }) {
+function NavBar({ pokemonList, setPokemonId }) {
+  const handleClick = (pokemon) => {
+    setPokemonId(pokemon.id);
+    if (pokemon.name === "pikachu") {
+      alert("pika pikachu !!!");
+    }
+  };
+
   return (
     <>
       {pokemonList.map((pokemon) => (

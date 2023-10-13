@@ -38,17 +38,6 @@ const pokemonList = [
 function App() {
   const [pokemonId, setPokemonId] = useState(pokemonList[0].id);
 
-  const handleClick = (pokemon) => {
-    setPokemonId(pokemon.id);
-    if (pokemon.name === "pikachu") {
-      alert("pika pikachu !!!");
-    }
-
-    {
-      /* {pokemonList.name === "pikachu" ? alert("pika pikachu !!!") : null} */
-    }
-  };
-
   let selectedPokemon = pokemonList.find((pokemon) => pokemon.id === pokemonId);
 
   useEffect(() => {
@@ -61,7 +50,6 @@ function App() {
         pokemonList={pokemonList}
         selectedPokemonId={pokemonId}
         setPokemonId={setPokemonId}
-        handleClick={handleClick}
       />
       <PokemonCard pokemon={selectedPokemon} />
     </div>
