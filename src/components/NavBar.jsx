@@ -4,9 +4,8 @@ function NavBar({ pokemonList, handleClick }) {
   return (
     <>
       {pokemonList.map((pokemon) => (
-        <button key={pokemon.id} onClick={() => handleClick(pokemon.id)}>
+        <button key={pokemon.id} onClick={() => handleClick(pokemon)}>
           {pokemon.name}
-          {pokemon.name === "pikachu" ? alert("pika pikachu !!!") : null}
         </button>
       ))}
     </>
